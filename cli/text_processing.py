@@ -9,7 +9,7 @@ def remove_punctuation(text: str) -> str:
     return re.sub(r'[^\w\s]', '', text)
 
 def tokenize(text: str) -> list[str]:
-    return list(filter(lambda x: len(x) > 0, text.split(" ")))
+    return list(filter(lambda x: len(x) > 0, text.split()))
 
 def remove_stopwords(tokens: list[str]) -> list[str]:
     stop_words = set(stopwords.words('english'))
